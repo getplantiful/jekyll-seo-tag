@@ -122,8 +122,12 @@
   <meta name="google-site-verification" content="{{ site.google_site_verification }}" />
 {% endif %}
 
+{% if page.application_ld_json %}
+<!-- application/ld+json omitted in Jekyll SEO tag -->
+{% else %}
 <script type="application/ld+json">
   {{ seo_tag.json_ld | jsonify }}
 </script>
+{% endif %}
 
 <!-- End Jekyll SEO tag -->
